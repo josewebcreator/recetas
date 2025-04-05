@@ -3,4 +3,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #F7B267;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+
 }
