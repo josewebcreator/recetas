@@ -1,0 +1,17 @@
+{
+    "0" : {
+        "item" : "recetas",
+        "icon" : "icons/list-icon.svg",
+        "url" : "/"
+    },
+    "1" : {
+        "item" : "favoritos",
+        "icon" : "icons/star-icon.svg",
+        "url" : "/"
+    },
+    "2" : {
+        "item" : "Sobre Mi",
+        "icon" : "icons/about-icon.svg",
+        "url" : "/"
+    }
+}

@@ -1,22 +1,64 @@
-.Header{
+.Header {
     width: 100%;
     height: 80px;
-    background-color:  #F25C54;
+    background-color: #F25C54;
     border-radius: 0 0 40px 40px;
     display: grid;
+    grid-template-columns: 5fr 2fr; /* Creates two columns: auto for logo, 1fr for menu */
     align-items: center;
     padding-left: 20px;
+    padding-right: 40px; /* Add right padding for menu spacing */
     overflow: hidden;
+    justify-content: space-between; /* Distribute space between the logo and menu */
 }
 
 .logo-container {
-    max-width: 20%;
+    /* Keep your existing logo-container styles */
+    width: 100%;
+    max-width: 210px;
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
-  }
+}
 
-.logo-contaier img{
+.logo-container img {
     width: 100%;
 }
+
+.HeaderMenu {
+    position: relative;
+}
+
+/* Add styling for the menu items (optional, but recommended) */
+.HeaderMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 48.5px;
+}
+
+.HeaderMenu ul li {
+    margin-left: 20px; /* Adjust spacing between menu items */
+    width: 100px;
+    min-height: 48.5px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center; 
+}
+
+a.menuEnlace { 
+    text-decoration: none;
+    color: #F7B267;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 48.5px;
+}
+a.menuEnlace img {
+    margin-right: 5px;
+}
+
