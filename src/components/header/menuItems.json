@@ -1,15 +1,15 @@
 {
-    "0" : {
+    "00" : {
         "item" : "recetas",
         "icon" : "icons/list-icon.svg",
         "url" : "/"
     },
-    "1" : {
+    "01" : {
         "item" : "favoritos",
         "icon" : "icons/star-icon.svg",
         "url" : "/"
     },
-    "2" : {
+    "02" : {
         "item" : "Sobre Mi",
         "icon" : "icons/about-icon.svg",
         "url" : "/"
