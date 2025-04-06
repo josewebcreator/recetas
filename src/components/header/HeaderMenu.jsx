@@ -1,14 +1,16 @@
 /*Imports*/
 import menuItems from './menuItems.json';
 import { Link } from 'react-router-dom';
-import { FaListUl, FaStar, FaUser } from 'react-icons/fa'; // Importa los iconos que necesitas
+import { FaListUl, FaStar } from 'react-icons/fa'; 
+import { ImFinder } from "react-icons/im";
+import { LuChefHat } from "react-icons/lu";
 
 //mapa de iconos
     
 const iconMap = {
-    "recetas": FaListUl,
+    "recetas": LuChefHat,
     "favoritos": FaStar,
-    "Sobre Mi": FaUser,
+    "Sobre Mi": ImFinder ,
 };
 
 export default function HeaderMenu() {

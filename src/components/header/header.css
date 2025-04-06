@@ -4,16 +4,16 @@
     background-color: #F25C54;
     border-radius: 0 0 40px 40px;
     display: grid;
-    grid-template-columns: 5fr 2fr; /* Creates two columns: auto for logo, 1fr for menu */
+    grid-template-columns: 5fr 2fr; 
     align-items: center;
     padding-left: 20px;
-    padding-right: 40px; /* Add right padding for menu spacing */
+    padding-right: 40px; 
     overflow: hidden;
-    justify-content: space-between; /* Distribute space between the logo and menu */
+    justify-content: space-between;
 }
 
 .logo-container {
-    /* Keep your existing logo-container styles */
+
     width: 100%;
     max-width: 210px;
     position: relative;
@@ -30,7 +30,7 @@
     position: relative;
 }
 
-/* Add styling for the menu items (optional, but recommended) */
+
 .HeaderMenu ul {
     list-style: none;
     padding: 0;
@@ -41,7 +41,7 @@
 }
 
 .HeaderMenu ul li {
-    margin-left: 20px; /* Adjust spacing between menu items */
+    margin-left: 20px; 
     width: 100px;
     min-height: 48.5px;
     margin-left: 20px;
@@ -80,3 +80,33 @@ a.menuEnlace::before {
 a.menuEnlace:hover::before {
     width: 100%; /* Al hacer hover, la barra ocupa todo el ancho */
 }
+
+/*Reglas responsives*/
+
+@media (max-width: 630px) {
+    .HeaderMenu ul li {
+      width: 80px;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+      margin-left: 20%;
+    }
+  
+    .HeaderMenu ul li span {
+      display: none;
+    }
+  
+    a.menuEnlace {
+      justify-content: center;
+      font-size: 25px;
+      display: flex;
+      align-items: center; 
+      padding: 0; 
+      margin: 0;
+    }
+  
+    .menuIcon {
+      margin-right: 0 !important; 
+      padding: 0;
+    }
+  }
