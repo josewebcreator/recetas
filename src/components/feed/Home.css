@@ -1,0 +1,20 @@
+.Home {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 5fr; /* Dos columnas: .Filters y .Recipes */
+    grid-template-rows: auto; /* Ajusta la altura automáticamente */
+    gap: 10px; /* Espaciado entre columnas */
+    height: calc(100vh - 80px); /* Resta la altura del header (80px) */
+    padding: 10px; /* Espaciado interno opcional */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño */
+}
+
+.Filters {
+    background-color: blue;
+    height: 100%; /* Asegúrate de que ocupe toda la altura de la grilla */
+}
+
+.Recipes {
+    background-color: lightgray; /* Color de fondo para diferenciar */
+    height: 100%; /* Asegúrate de que ocupe toda la altura de la grilla */
+}

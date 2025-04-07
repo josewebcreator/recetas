@@ -10,3 +10,8 @@ body {
   margin: 0;
 
 }
+
+/*Al parecer es una buena practica limitar a todos los hijos al tamaño del padre*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
