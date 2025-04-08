@@ -4,8 +4,10 @@
 /*Functions */
 function shortStr(str){
 
-    if(str.length>200){
-        let shortString = str.substr(0,200);
+    const strLimit = 150;
+
+    if(str.length>strLimit){
+        let shortString = str.substr(0,strLimit);
         return `${shortString}...`;
     }
 
