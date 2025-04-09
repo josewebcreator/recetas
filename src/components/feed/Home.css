@@ -9,11 +9,9 @@
     box-sizing: border-box; /* Incluye padding y border en el tamaño */
 }
 
-.Filters {
-    background-color: grey;
-    height: 100%; /* Asegúrate de que ocupe toda la altura de la grilla */
-}
 
+
+/*Recetas .Recipes*/
 .Recipes {
     background-color: #F7B267; /* Color de fondo para diferenciar */
     height: 100%; /* Asegúrate de que ocupe toda la altura de la grilla */
@@ -57,6 +55,7 @@
     scrollbar-color: #cc651c #F2C49A;
 }
 
+/*Platillos*/
 .Meal{
     width: 100%;
     height: 100%;
@@ -85,3 +84,68 @@
     -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
 }
+
+/*Filtros*/
+.Filters {
+    background-color: #F7B267;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: column;
+    
+}
+
+.Filter{
+    background-color: #f1cda5;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.Filter button {
+
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .button:hover {
+    filter: brightness(1.5);
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .color-1 { background-color: #264653; }
+  .color-2 { background-color: #2a9d8f; }
+  .color-3 { background-color: #e5b745; }
+  .color-4 { background-color: #f4a261; }
+  .color-5 { background-color: #e76f51; }
+  .color-6 { background-color: #457b9d; }
+  .color-7 { background-color: #1bdfe6; }
+  .color-8 { background-color: #17335b; }
+  .color-9 { background-color: #88f564; }
+  .color-10 { background-color: #e63946; }
+
+  .color-1:hover { background-color: #00415b; }
+  .color-2:hover { background-color: #0f9e8d; }
+  .color-3:hover { background-color: #e9b123; }
+  .color-4:hover { background-color: #ee832b; }
+  .color-5:hover { background-color: #e14721; }
+  .color-6:hover { background-color: #2270a1; }
+  .color-7:hover { background-color: #00ccd3; }
+  .color-8:hover { background-color: #10305c; }
+  .color-9:hover { background-color: #59f924; }
+  .color-10:hover { background-color: #dc0012; } 
