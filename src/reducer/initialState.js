@@ -1,7 +1,7 @@
 const initialState = {
     loadedRecipes: [], // Array to store loaded recipes
-    filterType: '', // Type of filter (e.g., category, ingredient, etc.)
-    filter: '', // Current filter value
+    filterType: 'letter', // Type of filter (e.g., category, ingredient, etc.)
+    filter: 'a', // Current filter value
     favoriteRecipes: [] // Array to store favorite recipes
 };
 

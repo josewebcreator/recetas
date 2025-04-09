@@ -21,17 +21,12 @@ async function getCategory(){
 }
 
 
-
 /*Componente */
 export default function Filters(){
 
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [selectedCategory, setSelectedCategory] = useState(null);
-    const [selectedFilter, setSelectedFilter] = useState('a');
-
-    const letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
     useEffect(() => {
         async function fetchCategories() {
@@ -51,12 +46,11 @@ export default function Filters(){
     }, []);
 
 
-
     return(
         <div className="Filters">
-            <FilterLetter filter={{ name: "Filter by letter", letters: letter }} setFilter={setSelectedFilter} />
+            <FilterLetter />
 
-            <FilterCategory loading={loading} error={error} setSelectedCategory={setSelectedCategory} categories={categories} />
+            <FilterCategory loading={loading} error={error} categories={categories} />
         </div>
     )
 }

@@ -19,7 +19,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 5px;
     padding: 15px;
-    grid-auto-rows: minmax(calc(100% - 35px),1fr);/*recordar, para que todos los elementos de un grid tengan la misma altura*/
+    grid-auto-rows: minmax(calc(100% - 200px),1fr);/*recordar, para que todos los elementos de un grid tengan la misma altura*/
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;

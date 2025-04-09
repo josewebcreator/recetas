@@ -1,10 +1,12 @@
 /*Includes */
 import { useState, useEffect } from "react";
 import Meal from "./Meal";
+import { useContext } from "react";
+import { MyContext } from "../../../context/context";
 
 /*Funciones*/
 
-/*Consulta por letra: Consulta standar cuando no hay filtros*/
+/*Consulta por letra*/
 async function getFoodByLetter(Letter){
 
     try{
@@ -24,32 +26,54 @@ async function getFoodByLetter(Letter){
 
 }
 
-/*Componente */
-export default function Recipes(){
+/*Consulta por categoria*/
+async function getFoodByCategory(category){
 
-    const [letter, setLetter] = useState('a');
+    try{
+        const response = await fetch(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
+        );
+        if(!response.ok){
+            const message = `Error Http: status: ${response.status}`;
+            throw new Error(message);
+        }
+        const data = await response.json();
+        return data.meals || [];
+    }catch(error){
+        console.error("Error al hacer consulta por categoria: ", error);
+        throw error;
+    }
+}
+
+export default function Recipes() {
+    const [state, dispatch]   = useContext(MyContext);
+    const { filterType, filter } = state || {}; // Desestructuración segura
+
     const [meals, setMeals] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(()=>{
+    useEffect(() => {
         const fetchRecipes = async () => {
             setLoading(true);
             setError(null);
-            try{
-                const data = await getFoodByLetter(letter);
-                setMeals(data);
-            }catch(err){
-                setError(err.message||'Error al hacer consulta' );
+            try {
+                if (filterType === 'letter') {
+                    setMeals(await getFoodByLetter(filter));
+                } else if (filterType === 'category') {
+                    setMeals(await getFoodByCategory(filter));
+                }
+            } catch (err) {
+                setError(err.message || 'Error al hacer consulta');
                 setMeals([]);
-            }finally{
+            } finally {
                 setLoading(false);
             }
-        }
+        };
         fetchRecipes();
-    },[letter]);
+    }, [filterType, filter]);
 
-    return(
+    return (
         <div className="Recipes">
             {loading ? (
                 <p>Cargando recetas...</p>
@@ -63,5 +87,5 @@ export default function Recipes(){
                 <p>No se encontraron las recetas</p>
             )}
         </div>
-    )
+    );
 }
