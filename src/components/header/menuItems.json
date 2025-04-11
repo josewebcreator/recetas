@@ -7,7 +7,7 @@
     "01" : {
         "item" : "favoritos",
         "icon" : "icons/star-icon.svg",
-        "url" : "/"
+        "url" : "/favorites"
     },
     "02" : {
         "item" : "Sobre Mi",
