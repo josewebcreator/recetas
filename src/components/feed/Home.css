@@ -207,4 +207,46 @@
     max-width: 100%; /* Asegura que los elementos no excedan el ancho */
 }
 
+.close-recipe{
+    color: #f42a2a;
+    position:absolute;
+    font-size: 40px;
+    right: 5px;
+}
 
+.close-recipe:hover{
+    cursor: pointer;
+}
+
+.recipe-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recipe-container::-webkit-scrollbar-thumb {
+    background-color: #D98850;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.recipe-container::-webkit-scrollbar-track {
+    background-color: #F2C49A;
+    border-radius: 5px;
+}
+
+.recipe-container::-webkit-scrollbar-thumb:hover {
+    background-color: #cc651c;
+}
+
+/* Estilos para la barra de desplazamiento vertical (Firefox) */
+.recipe-container {
+    scrollbar-width: thin;
+    scrollbar-color: #cc651c #F2C49A;
+}
+
+.addToFav{
+    position:Absolute;
+    color: #fa2c2c;
+    right: 45px;
+    font-size: 40px;
+}
