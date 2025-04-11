@@ -16,7 +16,6 @@ export default function OpenRecipe() {
             <div className="recipe-container">
                 <h2>{loadedRecipe[0].strMeal}</h2>
                 <img src={loadedRecipe[0].strMealThumb} alt={loadedRecipe[0].strMeal} />
-                <p>{loadedRecipe[0].strMeal}</p>
                 <h3>Category</h3>
                 <p>{loadedRecipe[0].strCategory}</p>
                 <h3>Instructions</h3>
